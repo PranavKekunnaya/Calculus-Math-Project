@@ -1,0 +1,113 @@
+
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+    overflow: hidden;
+}
+
+/* Game container styles */
+.game-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.8); /* Slight opacity */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* Header styles */
+.header {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    max-width: 600px;
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #fff; /* White text for contrast */
+}
+
+/* Question styles */
+.question {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #fff; /* White text for contrast */
+}
+
+/* Play area styles */
+.play-area {
+    position: relative;
+    width: 80%;
+    max-width: 600px;
+    height: 400px;
+    border: 2px solid #fff; /* White border */
+    border-radius: 10px;
+    background-color: rgba(230, 247, 255, 0.1); /* Light opacity */
+    overflow: hidden;
+    background-image: url('https://i.imgur.com/lsEmrk2.png'); /* Replace 'path_to_your_image.jpg' with the actual path to your image */
+    background-size: cover; /* Adjust the size of the background image */
+    background-position: center; /* Center the background image */
+}
+
+/* Character styles */
+/* Character styles */
+.character {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 25px solid transparent; /* Half the width of the "V" */
+    border-right: 25px solid transparent; /* Half the width of the "V" */
+    border-bottom: 50px solid #ff4500; /* Height of the "V" */
+    bottom: 10px;
+    left: calc(50% - 25px); /* Position at the center */
+    transition: left 0.1s;
+    box-shadow: none; /* No shadow needed */
+}
+
+
+/* Star styles */
+.star {
+    position: absolute;
+    width: 100px; /* Increased size */
+    height: 100px; /* Increased size */
+    background-color: gold;
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    color: black;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Game over screen styles */
+.game-over {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 24px;
+    text-align: center;
+    display: none;
+}
+
+.game-over-message {
+    margin: 20px;
+    font-size: 24px;
+    line-height: 1.5;
+}
+
+/* Gradient background for everything outside play area */
+body {
+    background: linear-gradient(to bottom, rgba(205, 125, 225, 0.8), rgba(0, 0, 255, 0.8)); /* Royal blue gradient */
+}
